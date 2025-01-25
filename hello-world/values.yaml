@@ -1,0 +1,14 @@
+deployment:
+  helloWorld:
+    image:
+      repository: quay.io/nearyd/hello-world-argocd
+      tag: "5.0"
+  replicas: 5
+kubernetesClusterDomain: cluster.local
+svc:
+  ports:
+  - name: http-web
+    port: 80
+    protocol: TCP
+    targetPort: 0
+  type: LoadBalancer
