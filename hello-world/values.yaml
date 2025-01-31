@@ -3,7 +3,7 @@ deployment:
     image:
       repository: quay.io/nearyd/hello-world-argocd
       tag: "5.0"
-  replicas: 3
+  replicas: 5
 kubernetesClusterDomain: cluster.local
 svc:
   ports:
